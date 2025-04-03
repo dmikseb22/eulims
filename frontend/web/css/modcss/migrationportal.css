@@ -1,0 +1,12 @@
+.progress-success{
+	background-color: #3c8dbc!important;
+}
+
+.progress-warning{
+	color: black!important;
+	background-color: yellow!important;
+}
+
+.progress-danger{
+	background-color: green!important;
+}

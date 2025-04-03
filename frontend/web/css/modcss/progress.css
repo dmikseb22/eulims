@@ -1,0 +1,262 @@
+/*
+Project Name: referral
+Copyright(C)2019 Department of Science & Technology -IX
+Developer: Egg
+05 22, 19 , 9:22:38 AM
+Module: progress
+*/
+/* 
+    Created on : 05 22, 19, 9:22:38 AM
+    Author     : ts-ict5
+*/
+
+/**modify container**/
+
+/** Colors **/
+ul.progress-track {
+  display: table;
+  list-style-type: none;
+  margin: 0;
+  padding: 2em 1em;
+  table-layout: fixed;
+  width: 100%;
+    font-weight: 600;
+}
+ul.progress-track li {
+  display: table-cell;
+  line-height: 3em;
+  position: relative;
+  text-align: center;
+}
+/****modify****/
+ul.progress-track li a {
+  text-decoration: none;
+}
+ul.progress-track li a:hover {
+  color: #0d47a1;
+}
+/***********/
+ul.progress-track li .progress-icon-wrap {
+  border-radius: 50%;
+  /*top: -1.5em;*/
+  top: -1.7em;
+  color: #fff;
+  display: block;
+  /*height: 2.5em;*/
+  height: 3em;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  /*width: 2.5em;*/
+  width: 3em;
+}
+/****modify******/
+ul.progress-track li .progress-icon-wrap .to-fit-icon{
+    font-size:1.2em;
+    position:relative;
+    bottom:10px;
+    margin-left: 0.2em;
+    margin-right: 0.3em;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  ul.progress-track li .progress-icon-wrap .to-fit-icon{
+    margin-left: 0.1em;
+  }
+}
+
+ul.progress-track li .icon-check-mark,
+ul.progress-track li .icon-down-arrow {
+  height: 25px;
+  width: 15px;
+  display: inline-block;
+  fill: currentColor;
+}
+ul.progress-track li .progress-text {
+  position: relative;
+  top: 10px;
+}
+
+ul.progress-track li.progress-done {
+  border-top: 7px solid #87ba51;
+  transition: border-color 1s ease-in-out;
+  -webkit-transition: border-color 1s ease-in-out;
+  -moz-transition: border-color 1s ease-in-out;
+}
+ul.progress-track li.progress-done .icon-down-arrow {
+  display: none;
+}
+ul.progress-track li.progress-done.progress-current .progress-icon-wrap {
+  background-color: #0070c0;
+}
+ul.progress-track li.progress-done.progress-current .progress-icon-wrap .icon-check-mark {
+  display: none;
+}
+ul.progress-track li.progress-done.progress-current .progress-icon-wrap .icon-down-arrow {
+  display: block;
+}
+ul.progress-track li.progress-done .progress-icon-wrap {
+    background-color: #4a6a28;
+    border: 2px solid #87ba51;
+    display: block;
+    height: 2em;
+    margin: 0 auto;
+    position: relative;
+    width: 2em;
+}
+/*****modify*****/
+ul.progress-track li.progress-done .progress-icon-wrap:hover, ul.progress-track li.progress-todo .progress-icon-wrap:hover {
+  background-color: #1C2331;
+}
+/*******/
+
+ul.progress-track li.progress-todo {
+  border-top: 7px solid #DDD;
+  color: #000;
+}
+ul.progress-track li.progress-todo .progress-icon-wrap {
+  /*background-color: #FFF;*/
+  background-color: #999;
+  border: 5px solid #DDD;
+  border-radius: 50%;
+  /*bottom: 1.5em;*/
+  color: #fff;
+  display: block;
+  /*height: 2.5em;*/
+  height: 2.5em;
+  margin: 0 auto;
+  position: relative;
+  /*width: 2.5em;*/
+  width: 2.5em;
+}
+ul.progress-track li.progress-todo .progress-icon-wrap .icon-check-mark,
+ul.progress-track li.progress-todo .progress-icon-wrap .icon-down-arrow {
+  display: none;
+}
+
+.not-yet {
+  position: relative;
+  top: 5px;
+}
+
+/***tool-tip***/
+.progress-tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+
+.progress-tooltip .progress-tooltiptext {
+    visibility: hidden;
+    /*width: 120px;*/
+    width: 120px;
+    /*background-color: black;*/
+    /*background-color: #1C2331;*/
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+    position: absolute;
+    z-index: 1;
+    /*bottom: 150%;*/
+    bottom: 200%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.progress-tooltip .progress-tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    /*border-color: black transparent transparent transparent;*/
+    border-color: #1C2331 transparent transparent transparent;
+}
+
+.progress-tooltip:hover .progress-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/****tool-tip for grid services****/
+.tooltip-grid {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+
+.tooltip-grid .tooltiptext-grid {
+    visibility: hidden;
+    width: 150px;
+    /*background-color: #886c14;*/
+    background-color: #222222;
+    color: #fff;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 7px;
+    padding: 7px 0;
+    position: absolute;
+    z-index: 1;
+    top: -2px;
+    left: 110%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tooltip-grid .tooltiptext-grid::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #222222 transparent transparent;
+}
+.tooltip-grid:hover .tooltiptext-grid {
+    visibility: visible;
+}
+
+/****tool-tip for agencies offered****/
+.tooltip-agency {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-agency .tooltiptext-agency {
+    visibility: hidden;
+    width: 110px;
+    background-color: #f8ff86;
+    color: #111;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    left: 50%;
+    margin-left: -55px;
+}
+
+.tooltip-agency .tooltiptext-agency::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #f8ff86 transparent;
+}
+.tooltip-agency:hover .tooltiptext-agency {
+    visibility: visible;
+}

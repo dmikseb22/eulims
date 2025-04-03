@@ -1,0 +1,10 @@
+ul#workflow-workflow-sortable.sortable.list.kv-connected.cursor-move{
+	min-height:100px;
+	max-height: 500px;
+}
+
+
+ul#w1-sortable.sortable.grid.kv-connected.cursor-move{
+	min-height:100px;
+	max-height: 500px;
+}

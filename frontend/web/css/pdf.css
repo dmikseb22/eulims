@@ -1,0 +1,46 @@
+
+body {
+	font-family: \'DejaVu Sans Condensed\';
+}
+@page {
+	margin-top: 1.0cm;
+	margin-bottom: 1.0cm;
+	margin-left: 0.5cm;
+	margin-right: 0.5cm;
+	/*margin-header: 0mm;
+	margin-footer: 0mm;*/
+	background-color:#ffffff;
+}
+.border-bottom-line{
+    border-bottom: 1px solid black;
+}
+.border-top-line{
+    border-top: 1px solid black;
+}
+.border-right-line{
+    border-right: 1px solid black;
+}
+.border-left-line{
+    border-left: 1px solid black;
+}
+.valign-bottom{
+    vertical-align: bottom
+}
+.text-bold{
+    font-weight: bold
+}
+.text-right{
+    text-align: right
+}
+.text-left{
+    text-align: left
+} 
+.text-center{
+    text-align: center
+}
+.padding-right-5{
+    padding-right: 5px
+}
+.padding-left-5{
+    padding-left: 5px
+}

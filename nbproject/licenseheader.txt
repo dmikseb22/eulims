@@ -1,0 +1,11 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Project Name: ${project.name}${licensePrefix}
+${licensePrefix}Copyright(C)${date?date?string("yyyy")} Department of Science & Technology -IX${licensePrefix}
+${licensePrefix}Developer: Eng'r Nolan F. Sunico ${licensePrefix}
+${licensePrefix}${date} , ${time}${licensePrefix}
+${licensePrefix}Module: ${name}${licensePrefix}
+<#if licenseLast??>
+${licenseLast}
+</#if>
